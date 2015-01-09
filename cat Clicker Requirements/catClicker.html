@@ -3,17 +3,18 @@
 <head>----</head>
 <body>
   <script>
-    var count = 0;
-    function increment() {
-      count = count + 1;
-      document.getElementById("count").innerHTML = "" + count;
+    function increment(elemID) {
+      var count = parseInt(document.getElementById(elemID).innerHTML) + 1;
+      document.getElementById(elemID).innerHTML = "" + count;
     }
   </script>
 
   <p />
-  <img id="pic" src="625069434_bf6e0d6ea4_o.jpg" alt="CAT" style="width:304px;height:228px" onclick="increment()" />
+  <img id="pic1" src="catpic1.jpg" alt="CAT" style="width:304px;height:228px" onclick="increment('counter1')" />
+  <div id="counter1"> 0 </div>
 
   <p />
-  <div id="count"> 0 </div>
+  <img id="pic2" src="catpic2.jpg" alt="CAT" style="width:304px;height:228px" onclick="increment('counter2')" />
+  <div id="counter2"> 0 </div>
 </body>
 </html>
